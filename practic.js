@@ -5,6 +5,15 @@ names.forEach((name) => {
     const li = document.createElement("li")
     li.textContent = name
     list.appendChild(li)
+    li.addEventListener("click", () => {
+        const delBtn = document.createElement("button")
+        delBtn.textContent = "удалить"
+        li.appendChild(delBtn)
+        delBtn.addEventListener("click", () => {
+            li.remove()
+            delBtn.remove()
+        })
+    })
 })
 
 let name = "Bob"
@@ -13,4 +22,13 @@ addBtn.addEventListener("click", () => {
     const li = document.createElement("li")
     li.textContent = name
     list.appendChild(li)
+    li.addEventListener("click", () => {
+        const delBtn = document.createElement("button")
+        delBtn.textContent = "удалить"
+        li.appendChild(delBtn)
+        delBtn.addEventListener("click", () => {
+            li.remove()
+            delBtn.remove()
+        })
+    })
 })
